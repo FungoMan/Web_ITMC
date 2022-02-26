@@ -1,0 +1,63 @@
+.wrapper-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+  }
+  
+  .wrapper-form .wrapper-number {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .wrapper-form .wrapper-number .number {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-left: 30px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  #number1 {
+    border: 2px solid red;
+  }
+  
+  .wrapper-form .wrapper-number .number#number1::before {
+    display: none;
+  }
+  
+  .wrapper-form .wrapper-number .number::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -31px;
+    width: 31px;
+    height: 2px;
+    background-color: black;
+    transition: 0.3s;
+  }
+  
+  .wrapper-form .wrapper-number .number.active {
+    border: 2px solid red;
+    transition: 0.3s;
+  }
+  
+  .wrapper-form .wrapper-number .number.active::before {
+    background-color: red;
+    transition: 0.3s;
+  }
+  
+  .wrapper-form .wrapper-button {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  
+  .wrapper-form .wrapper-button .next {
+    margin-left: 50px;
+  }
